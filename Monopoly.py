@@ -74,7 +74,7 @@ class Board:
                     self.auctionIndex += 1
         playerList[self.auctionPlayers[0] - 1].money -= self.auctionPrice
         self.money += self.auctionPrice
-        playerList[self.auctionPlayers[0] - 1].append(property)
+        playerList[self.auctionPlayers[0] - 1].properties.append(property)
         input(playerList[self.auctionPlayers[0] - 1].name + " has won the auction! They get " + spaces[property][0] + " for $" + str(self.auctionPrice) + ".")
                 
     def gameStart(self):
@@ -158,4 +158,5 @@ playingBoard.gameStart()
 # print(playerList)
 # input()
 playerList[3].currSpace = 3
-playerList[2].properties.append(3)
+# playerList[2].properties.append(3)
+playerList[3].land()
